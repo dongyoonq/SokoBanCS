@@ -16,16 +16,16 @@
 ## <strong>프로젝트 및 클래스 설명</strong>
 최상위 `Main(Program)`에 바로 밑에
 `GameLoop`가 동작하는 `Game` 클래스와 `Scene` 클래스가 `Manager`분류로
-설계하였고(`싱글턴` 패턴으로 관리자를 만들어 객체 하나만 사용하도록함)
+설계하였고(`싱글톤` 패턴으로 관리자를 만들어 객체 하나만 사용하도록함)
 
 `Scene` 클래스는 `Map` 객체를 가지는 관리자로
 현재 씬(맵)의 정보를 가지고 있고 파일을 읽어 맵을 가져오고
 에디터 모드로 파일을 쓰기로 맵을 저장하는 메서드가 있음
 
-`GameMode`와 `EditorMode`도 `PlayMode` 분류로 이녀석들도 싱글턴으로 설계함
+`GameMode`와 `EditorMode`도 `PlayMode` 분류로 이녀석들도 싱글톤으로 설계함
 하나만 사용하는 객체이기 때문
 
-그밑에 `Object` 분류로 `Map`, `Object`, `Player`가 있음 `Ma`p은 `Object` 객체를 가지고있음
+그밑에 `Object` 분류로 `Map`, `Object`, `Player`가 있음 `Map`은 `Object` 객체를 가지고있음
 `Object`는 타일정보와, 그 타일의 좌표정보를 가짐
 
 이 게임은 싱글게임이라 `Player`가 하나만 필요할거라 예상해 이것도 싱글톤으로 설계
